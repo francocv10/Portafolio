@@ -1,6 +1,6 @@
 # SPEC 02 — Maquetación de la Home
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-10-17
 > **Objetivo:** Construir en `app/home/page.tsx` la Home del portafolio (header, hero, proyectos, sobre mí y footer) replicando el mockup `references/Home-html/Main.dc.html`, con el contenido centralizado en `app/data/data.ts`.
