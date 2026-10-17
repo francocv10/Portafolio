@@ -1,4 +1,5 @@
 import { site } from "../data/data";
+import About from "./components/About";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
@@ -10,6 +11,7 @@ export default function HomePage() {
       <main>
         <Hero {...site.hero} />
         <Projects {...site.projects} />
+        <About {...site.about} />
       </main>
     </>
   );
