@@ -1,6 +1,6 @@
 # SPEC 01 — Estilos globales basados en la Home
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** ninguna
 > **Fecha:** 2026-10-17
 > **Objetivo:** Reemplazar los estilos por defecto de Next.js por los tokens, tipografías, base y clases de animación globales extraídos del mockup `references/Home-html/Main.dc.html`.
