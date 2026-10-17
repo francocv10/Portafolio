@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Portafolio — Home</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body { margin: 0; font-family: 'Manrope', system-ui, sans-serif; background: #FBFBF9; color: #121214; }
+a { color: #1E42A8; }
+a:hover { color: #142C72; }
+
+@keyframes dcRise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes dcMask { from { clip-path: inset(0 0 105% 0); } to { clip-path: inset(0 0 -10% 0); } }
+@keyframes dcBlink { 0%, 44% { opacity: 1; } 50%, 94% { opacity: 0; } 100% { opacity: 1; } }
+
+.anim .rise { animation: dcRise 0.62s cubic-bezier(0.22, 0.61, 0.36, 1) backwards; }
+.anim .d1 { animation-delay: 0.05s; }
+.anim .d2 { animation-delay: 0.13s; }
+.anim .d3 { animation-delay: 0.21s; }
+.anim .d4 { animation-delay: 0.29s; }
+.anim .d5 { animation-delay: 0.37s; }
+.anim .d6 { animation-delay: 0.45s; }
+.anim .d7 { animation-delay: 0.53s; }
+.anim .d8 { animation-delay: 0.61s; }
+
+.anim .mask-line { animation: dcMask 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards; }
+.anim .caret { animation: dcBlink 1.15s steps(1, end) infinite; }
+
+.anim .navlink { background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 14px 76%; background-size: 0% 1px; transition: background-size 0.28s ease, color 0.2s ease; }
+.anim .navlink:hover { background-size: calc(100% - 28px) 1px; }
+
+.anim .cta { transition: transform 0.22s cubic-bezier(0.34, 1.3, 0.64, 1), box-shadow 0.22s ease; }
+.anim .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -14px rgba(18, 18, 20, 0.55); }
+
+.anim .card { transition: transform 0.32s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.32s ease, border-color 0.32s ease; }
+.anim .card:hover { transform: translateY(-5px); border-color: #D6D5CE; box-shadow: 0 22px 44px -26px rgba(18, 18, 20, 0.42); }
+.anim .shot-inner { transition: transform 0.5s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.anim .card:hover .shot-inner { transform: scale(1.055); }
+.anim .arrow { display: inline-block; transition: transform 0.26s cubic-bezier(0.34, 1.3, 0.64, 1); }
+.anim .card:hover .arrow { transform: translateX(7px); }
+.anim .case { background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 0 86%; background-size: 0% 1.5px; transition: background-size 0.3s ease; }
+.anim .card:hover .case { background-size: 100% 1.5px; }
+
+.anim .chip { transition: border-color 0.25s ease, transform 0.25s ease; }
+.anim .chip:hover { border-color: #B9B8B0; transform: translateY(-2px); }
+
+.anim .social { transition: background-color 0.25s ease, border-color 0.25s ease; }
+.anim .social:hover { background-color: #26262E; border-color: #55555E; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim .rise, .anim .mask-line, .anim .caret { animation: none; }
+  .anim .navlink, .anim .cta, .anim .card, .anim .shot-inner, .anim .arrow, .anim .case, .anim .chip, .anim .social { transition: none; }
+}
+</style>
+</helmet>
+
+<div class="{{rootClass}}" style="width: 100%; min-height: 100%; background: #FBFBF9; color: #121214; box-sizing: border-box; display: flex; flex-direction: column">
+
+  <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 28px clamp(24px, 5vw, 64px); border-bottom: 1px solid #E6E5E0">
+    <a href="#inicio" style="font-weight: 800; font-size: 18px; letter-spacing: -0.02em; text-decoration: none; color: #121214; padding: 10px 0">[TU NOMBRE]</a>
+    <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
+      <a class="navlink" href="#proyectos" style="font-size: 15px; font-weight: 500; text-decoration: none; color: #4A4A52; padding: 12px 14px">Proyectos</a>
+      <a class="navlink" href="#sobre-mi" style="font-size: 15px; font-weight: 500; text-decoration: none; color: #4A4A52; padding: 12px 14px">Sobre mí</a>
+      <a class="navlink" href="#contacto" style="font-size: 15px; font-weight: 500; text-decoration: none; color: #4A4A52; padding: 12px 14px">Contacto</a>
+      <a class="cta" href="#contacto" style="font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: {{accent}}; border-radius: 999px; padding: 12px 20px; margin-left: 8px">Descargar CV</a>
+    </nav>
+  </header>
+
+  <section id="inicio" style="padding: clamp(64px, 9vw, 128px) clamp(24px, 5vw, 64px) clamp(56px, 7vw, 96px)">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+      <p class="rise d1" style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5C66">Desarrollo de software · Santiago, Chile<span class="caret" style="display: inline-block; width: 8px; height: 14px; background: #2B5CE6; margin-left: 6px; vertical-align: -2px"></span></p>
+      <h1 class="mask-line" style="margin: 0; font-size: clamp(44px, 7vw, 92px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 800; max-width: 16ch">Construyo productos web de principio a fin.</h1>
+      <p class="rise d3" style="margin: 0; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.6; color: #4A4A52; max-width: 62ch">[Dos líneas sobre qué tipo de problemas resuelves y para quién. Ej: backend y frontend para equipos pequeños que necesitan salir a producción rápido.]</p>
+      <div class="rise d4" style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 8px">
+        <span class="chip" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #35353D; border: 1px solid #DEDDD7; border-radius: 999px; padding: 8px 14px">[Stack 1]</span>
+        <span class="chip" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #35353D; border: 1px solid #DEDDD7; border-radius: 999px; padding: 8px 14px">[Stack 2]</span>
+        <span class="chip" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #35353D; border: 1px solid #DEDDD7; border-radius: 999px; padding: 8px 14px">[Stack 3]</span>
+        <span class="chip" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #35353D; border: 1px solid #DEDDD7; border-radius: 999px; padding: 8px 14px">[Stack 4]</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" style="padding: 0 clamp(24px, 5vw, 64px) clamp(64px, 8vw, 112px)">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+      <div class="rise d5" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid #E6E5E0; padding-top: 24px">
+        <h2 style="margin: 0; font-size: 28px; letter-spacing: -0.02em; font-weight: 800">Proyectos seleccionados</h2>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5C66">04 casos</p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 32px">
+
+        <article class="card rise d5" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px; background: #FFFFFF; border: 1px solid #E6E5E0; border-radius: 18px; padding: 18px">
+          <div class="shot" style="height: 240px; border-radius: 12px; overflow: hidden">
+            <div class="shot-inner" style="width: 100%; height: 100%; background: #F1F0EC; display: flex; align-items: center; justify-content: center">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6B6B74">[CAPTURA DEL PROYECTO]</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 6px 6px">
+            <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 700">[Proyecto 1]</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A4A52">[Una línea sobre qué resuelve y para quién.]</p>
+            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6B74">[Stack] · [Año]</p>
+            <a href="Proyecto.dc.html" style="font-size: 15px; font-weight: 600; text-decoration: none; color: {{accent}}; padding: 12px 0; margin-top: 4px; align-self: flex-start"><span class="case">Ver caso</span> <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="card rise d6" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px; background: #FFFFFF; border: 1px solid #E6E5E0; border-radius: 18px; padding: 18px">
+          <div class="shot" style="height: 240px; border-radius: 12px; overflow: hidden">
+            <div class="shot-inner" style="width: 100%; height: 100%; background: #F1F0EC; display: flex; align-items: center; justify-content: center">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6B6B74">[CAPTURA DEL PROYECTO]</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 6px 6px">
+            <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 700">[Proyecto 2]</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A4A52">[Una línea sobre qué resuelve y para quién.]</p>
+            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6B74">[Stack] · [Año]</p>
+            <a href="Proyecto.dc.html" style="font-size: 15px; font-weight: 600; text-decoration: none; color: {{accent}}; padding: 12px 0; margin-top: 4px; align-self: flex-start"><span class="case">Ver caso</span> <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="card rise d7" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px; background: #FFFFFF; border: 1px solid #E6E5E0; border-radius: 18px; padding: 18px">
+          <div class="shot" style="height: 240px; border-radius: 12px; overflow: hidden">
+            <div class="shot-inner" style="width: 100%; height: 100%; background: #F1F0EC; display: flex; align-items: center; justify-content: center">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6B6B74">[CAPTURA DEL PROYECTO]</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 6px 6px">
+            <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 700">[Proyecto 3]</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A4A52">[Una línea sobre qué resuelve y para quién.]</p>
+            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6B74">[Stack] · [Año]</p>
+            <a href="Proyecto.dc.html" style="font-size: 15px; font-weight: 600; text-decoration: none; color: {{accent}}; padding: 12px 0; margin-top: 4px; align-self: flex-start"><span class="case">Ver caso</span> <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="card rise d8" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px; background: #FFFFFF; border: 1px solid #E6E5E0; border-radius: 18px; padding: 18px">
+          <div class="shot" style="height: 240px; border-radius: 12px; overflow: hidden">
+            <div class="shot-inner" style="width: 100%; height: 100%; background: #F1F0EC; display: flex; align-items: center; justify-content: center">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6B6B74">[CAPTURA DEL PROYECTO]</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 6px 6px">
+            <h3 style="margin: 0; font-size: 22px; letter-spacing: -0.02em; font-weight: 700">[Proyecto 4]</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A4A52">[Una línea sobre qué resuelve y para quién.]</p>
+            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6B74">[Stack] · [Año]</p>
+            <a href="Proyecto.dc.html" style="font-size: 15px; font-weight: 600; text-decoration: none; color: {{accent}}; padding: 12px 0; margin-top: 4px; align-self: flex-start"><span class="case">Ver caso</span> <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" style="padding: 0 clamp(24px, 5vw, 64px) clamp(64px, 8vw, 112px)">
+    <div style="max-width: 1120px; margin: 0 auto; border-top: 1px solid #E6E5E0; padding-top: 24px; display: flex; flex-wrap: wrap; gap: 48px">
+      <div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <h2 style="margin: 0; font-size: 28px; letter-spacing: -0.02em; font-weight: 800">Sobre mí</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #35353D">[Tres o cuatro líneas: cómo llegaste al desarrollo, qué tipo de equipos o problemas te interesan, y qué estás buscando ahora.]</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #35353D">[Opcional: estudios, certificaciones o algo que te distinga fuera del código.]</p>
+      </div>
+      <div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <h3 style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5C66; font-weight: 500">Herramientas</h3>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
+          <li style="font-size: 15px; color: #35353D; border-bottom: 1px solid #EAE9E4; padding-bottom: 10px">[Lenguajes]</li>
+          <li style="font-size: 15px; color: #35353D; border-bottom: 1px solid #EAE9E4; padding-bottom: 10px">[Frameworks]</li>
+          <li style="font-size: 15px; color: #35353D; border-bottom: 1px solid #EAE9E4; padding-bottom: 10px">[Bases de datos]</li>
+          <li style="font-size: 15px; color: #35353D; padding-bottom: 10px">[Infra y herramientas]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" style="margin-top: auto; background: #121214; color: #FBFBF9; padding: clamp(56px, 7vw, 96px) clamp(24px, 5vw, 64px)">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #A3A3AC">Hablemos</p>
+        <h2 style="margin: 0; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 800">¿Tienes un proyecto en mente?</h2>
+        <a href="mailto:[tu@email.com]" style="font-size: 20px; color: #FBFBF9; text-decoration: underline; text-underline-offset: 6px; padding: 10px 0">[tu@email.com]</a>
+      </div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 8px">
+        <a class="social" href="https://github.com" style="font-size: 15px; font-weight: 600; color: #FBFBF9; text-decoration: none; border: 1px solid #3A3A42; border-radius: 999px; padding: 13px 22px">GitHub</a>
+        <a class="social" href="https://linkedin.com" style="font-size: 15px; font-weight: 600; color: #FBFBF9; text-decoration: none; border: 1px solid #3A3A42; border-radius: 999px; padding: 13px 22px">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2B5CE6","options":["#2B5CE6","#1F6B4E","#B0471F","#121214"],"section":"Marca"},"animaciones":{"editor":"boolean","default":true,"section":"Movimiento"}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var on = this.props.animaciones ?? true;
+    return {
+      accent: this.props.accent ?? '#2B5CE6',
+      rootClass: on ? 'anim' : 'static'
+    };
+  }
+}
+</script>
+</body>
+</html>
