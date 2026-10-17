@@ -1,9 +1,13 @@
 import { site } from "../data/data";
+import Header from "./components/Header";
 
 export default function HomePage() {
   return (
-    <main>
-      <p>{site.name}</p>
-    </main>
+    <>
+      <Header name={site.name} nav={site.nav} cv={site.cv} />
+      <main>
+        <p>{site.name}</p>
+      </main>
+    </>
   );
 }
