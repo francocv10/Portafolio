@@ -38,3 +38,32 @@ a {
 a:hover {
   color: var(--color-link-hover);
 }
+
+@keyframes dcRise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes dcMask {
+  from { clip-path: inset(0 0 105% 0); }
+  to { clip-path: inset(0 0 -10% 0); }
+}
+
+@keyframes dcBlink {
+  0%, 44% { opacity: 1; }
+  50%, 94% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.rise { animation: dcRise 0.62s cubic-bezier(0.22, 0.61, 0.36, 1) backwards; }
+.d1 { animation-delay: 0.05s; }
+.d2 { animation-delay: 0.13s; }
+.d3 { animation-delay: 0.21s; }
+.d4 { animation-delay: 0.29s; }
+.d5 { animation-delay: 0.37s; }
+.d6 { animation-delay: 0.45s; }
+.d7 { animation-delay: 0.53s; }
+.d8 { animation-delay: 0.61s; }
+
+.mask-line { animation: dcMask 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards; }
+.caret { animation: dcBlink 1.15s steps(1, end) infinite; }
