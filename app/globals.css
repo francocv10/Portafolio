@@ -113,3 +113,8 @@ a:hover {
 
 .social { transition: background-color 0.25s ease, border-color 0.25s ease; }
 .social:hover { background-color: #26262E; border-color: #55555E; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise, .mask-line, .caret { animation: none; }
+  .navlink, .cta, .card, .shot-inner, .arrow, .case, .chip, .social { transition: none; }
+}
