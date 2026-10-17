@@ -31,12 +31,14 @@ body {
   font-family: var(--font-sans);
 }
 
-a {
-  color: var(--color-link);
-}
+@layer base {
+  a {
+    color: var(--color-link);
+  }
 
-a:hover {
-  color: var(--color-link-hover);
+  a:hover {
+    color: var(--color-link-hover);
+  }
 }
 
 @keyframes dcRise {
