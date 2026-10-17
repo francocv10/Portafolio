@@ -8,7 +8,7 @@ type HeaderProps = {
 
 export default function Header({ name, nav, cv }: HeaderProps) {
   return (
-    <header className="flex flex-wrap items-center justify-between gap-4 border-b border-line px-[clamp(24px,5vw,64px)] py-7">
+    <header className="flex leading-[normal] flex-wrap items-center justify-between gap-4 border-b border-line px-[clamp(24px,5vw,64px)] py-7">
       <a
         href="#inicio"
         className="py-2.5 text-[18px] font-extrabold tracking-[-0.02em] text-ink"

@@ -16,7 +16,7 @@ export default function Footer({
   return (
     <footer
       id="contacto"
-      className="mt-auto bg-ink px-[clamp(24px,5vw,64px)] py-[clamp(56px,7vw,96px)] text-page"
+      className="mt-auto bg-ink leading-[normal] px-[clamp(24px,5vw,64px)] py-[clamp(56px,7vw,96px)] text-page"
     >
       <div className="mx-auto flex max-w-[1120px] flex-wrap items-end justify-between gap-10">
         <div className="flex min-w-0 flex-[1_1_420px] flex-col gap-[18px]">

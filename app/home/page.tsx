@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Header name={site.name} nav={site.nav} cv={site.cv} />
-      <main>
+      <main className="leading-[normal]">
         <Hero {...site.hero} />
         <Projects {...site.projects} />
         <About {...site.about} />
