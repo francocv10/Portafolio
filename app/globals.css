@@ -24,3 +24,17 @@
   --radius-card: 18px;
   --radius-shot: 12px;
 }
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
