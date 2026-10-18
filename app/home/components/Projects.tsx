@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Project } from "../../data/data";
 
 type ProjectsProps = {
@@ -58,13 +59,13 @@ export default function Projects({
                 <p className="font-mono text-[12px] text-faint">
                   {project.meta}
                 </p>
-                <a
+                <Link
                   href={project.href}
                   className="mt-1 self-start py-3 text-[15px] font-semibold text-accent"
                 >
                   <span className="case">{caseLabel}</span>{" "}
                   <span className="arrow">→</span>
-                </a>
+                </Link>
               </div>
             </article>
           ))}
