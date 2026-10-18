@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { site } from "../../data/data";
+import ProjectHeader from "../components/ProjectHeader";
 
 export function generateStaticParams() {
   return site.projects.items.map(({ slug }) => ({ slug }));
@@ -15,9 +16,14 @@ export default async function ProjectPage({
     notFound();
   }
 
+  const { back, contact } = site.projectPage;
+
   return (
-    <main className="leading-[normal]">
-      <h1>{project.title}</h1>
-    </main>
+    <div className="flex min-h-screen flex-col leading-[normal]">
+      <ProjectHeader back={back} contact={contact} />
+      <main>
+        <h1>{project.title}</h1>
+      </main>
+    </div>
   );
 }
