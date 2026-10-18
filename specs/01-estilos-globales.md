@@ -73,17 +73,17 @@ Convención: los valores salen de los estilos en línea y del bloque `<style>` d
 
 ## Criterios de aceptación
 
-- [ ] `npm run build` termina sin errores.
-- [ ] `npm run lint` termina sin errores.
-- [ ] `app/layout.tsx` ya no importa `Geist` ni `Geist_Mono`.
-- [ ] `<html>` tiene `lang="es"` y las clases de las variables `--font-manrope` y `--font-plex-mono`.
-- [ ] `getComputedStyle(document.body).backgroundColor` es `rgb(251, 251, 249)` y `color` es `rgb(18, 18, 20)`.
-- [ ] `getComputedStyle(document.body).fontFamily` empieza por la familia de Manrope.
-- [ ] `app/globals.css` no contiene `prefers-color-scheme`.
-- [ ] Un elemento con clase `text-accent` usa `#2B5CE6` y uno con `font-mono` usa IBM Plex Mono.
-- [ ] Con el emulador de `prefers-reduced-motion: reduce` activado, un elemento con `.rise` no tiene animación y `.card:hover` no tiene transición.
-- [ ] Un elemento de prueba con `.card` sube 5 px y cambia su borde a `#D6D5CE` al pasar el cursor (con movimiento permitido).
-- [ ] Todos los valores de color, radio y duración de `globals.css` existen en `Main.dc.html`.
+- [x] `npm run build` termina sin errores.
+- [x] `npm run lint` termina sin errores.
+- [x] `app/layout.tsx` ya no importa `Geist` ni `Geist_Mono`.
+- [x] `<html>` tiene `lang="es"` y las clases de las variables `--font-manrope` y `--font-plex-mono`.
+- [x] `getComputedStyle(document.body).backgroundColor` es `rgb(251, 251, 249)` y `color` es `rgb(18, 18, 20)`.
+- [x] `getComputedStyle(document.body).fontFamily` empieza por la familia de Manrope.
+- [x] `app/globals.css` no contiene `prefers-color-scheme`.
+- [x] Un elemento con clase `text-accent` usa `#2B5CE6` y uno con `font-mono` usa IBM Plex Mono.
+- [x] Con el emulador de `prefers-reduced-motion: reduce` activado, un elemento con `.rise` no tiene animación y `.card:hover` no tiene transición.
+- [x] Un elemento de prueba con `.card` sube 5 px y cambia su borde a `#D6D5CE` al pasar el cursor (con movimiento permitido).
+- [x] Todos los valores de color, radio y duración de `globals.css` existen en `Main.dc.html`.
 
 ## Decisiones tomadas y descartadas
 
