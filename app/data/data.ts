@@ -88,7 +88,6 @@ export const site = {
     { label: "Sobre mí", href: "#sobre-mi" },
     { label: "Contacto", href: "#contacto" },
   ] satisfies NavLink[],
-  cv: { label: "Descargar CV", href: "#contacto" } satisfies NavLink,
   hero: {
     eyebrow: "Desarrollo de software · Santiago, Chile",
     title: "Construyo productos web de principio a fin.",

@@ -3,10 +3,9 @@ import type { NavLink } from "../../data/data";
 type HeaderProps = {
   name: string;
   nav: NavLink[];
-  cv: NavLink;
 };
 
-export default function Header({ name, nav, cv }: HeaderProps) {
+export default function Header({ name, nav }: HeaderProps) {
   return (
     <header className="flex leading-[normal] flex-wrap items-center justify-between gap-4 border-b border-line px-[clamp(24px,5vw,64px)] py-7">
       <a
@@ -25,12 +24,6 @@ export default function Header({ name, nav, cv }: HeaderProps) {
             {link.label}
           </a>
         ))}
-        <a
-          href={cv.href}
-          className="cta ml-2 rounded-full bg-accent px-5 py-3 text-[15px] font-semibold text-white"
-        >
-          {cv.label}
-        </a>
       </nav>
     </header>
   );
