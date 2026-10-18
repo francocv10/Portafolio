@@ -20,11 +20,10 @@ app/data/       Contenido del sitio (data.ts): textos, enlaces y proyectos
 app/            Layout y estilos globales (App Router)
 proxy.ts        Resuelve los slugs de proyecto y devuelve 404 si no existen
 public/         Archivos estáticos
-specs/          Specs de funcionalidades (se crea al usar /spec)
-.claude/skills/ Skills de Claude Code (spec, spec-impl, frontend-design)
+specs/          Especificaciones de funcionalidades (diseño y prueba)
 ```
 
-El alias de rutas `@/*` apunta a la raíz del repositorio. No hay ningún test runner configurado.
+El alias de rutas `@/*` apunta a la raíz del repositorio. Se utiliza Playwright como test runner para la ejecución de pruebas de extremo a extremo (E2E) basadas en las especificaciones.
 
 ## Flujo de trabajo guiado por specs
 
