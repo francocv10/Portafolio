@@ -1,6 +1,6 @@
 # SPEC 03 — Maquetación del detalle de proyecto
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01, SPEC 02
 > **Fecha:** 2026-10-17
 > **Objetivo:** Construir la página de detalle de proyecto en `/proyectos/[slug]` replicando el mockup `references/Detalle-de-proyecto-html/Proyecto.dc.html`, con el contenido de cada proyecto en `app/data/data.ts` y conectando los enlaces "Ver caso" de la Home.
