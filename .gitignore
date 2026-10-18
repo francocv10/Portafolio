@@ -1,13 +1,16 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 
-specs
-.agents
-.claude
+#Archivos de IA
+.agents/
+.claude/
 CLAUDE.md
 AGENTS.md
-.playwright-mcp
-.playwright-screenshots
+skills-lock.json
+
+#Playwright y QA
+.playwright-mcp/
+.playwright-screenshots/
 
 # dependencies
 /node_modules
