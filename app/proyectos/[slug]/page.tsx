@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { site } from "../../data/data";
+import ProjectBody from "../components/ProjectBody";
 import ProjectFacts from "../components/ProjectFacts";
 import ProjectHeader from "../components/ProjectHeader";
 import ProjectHero from "../components/ProjectHero";
@@ -19,7 +20,7 @@ export default async function ProjectPage({
     notFound();
   }
 
-  const { back, contact, eyebrow, facts } = site.projectPage;
+  const { back, contact, eyebrow, facts, summaryTitle } = site.projectPage;
 
   return (
     <div className="flex min-h-screen flex-col leading-[normal]">
@@ -38,6 +39,11 @@ export default async function ProjectPage({
           links={project.detail.links}
         />
         <ProjectMainShot label={project.detail.mainShotLabel} />
+        <ProjectBody
+          sections={project.detail.sections}
+          summaryTitle={summaryTitle}
+          summary={project.detail.summary}
+        />
       </main>
     </div>
   );
