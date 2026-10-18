@@ -98,23 +98,23 @@ Antes del paso 1, leer en `node_modules/next/dist/docs/` la guía de `redirect` 
 
 ## Criterios de aceptación
 
-- [ ] `npm run build` termina sin errores.
-- [ ] `npm run lint` termina sin errores.
-- [ ] Abrir `/` redirige a `/home` y `/home` responde 200.
-- [ ] Existen `app/home/page.tsx`, `app/data/data.ts` y los cinco archivos de `app/home/components/`.
-- [ ] Ningún archivo de la Home contiene `"use client"` ni estilos en línea (`style=`), salvo que un valor no pueda expresarse con Tailwind.
-- [ ] Todo texto visible de la Home se importa de `app/data/data.ts`; ningún componente tiene texto escrito a mano.
-- [ ] Hay exactamente cuatro tarjetas de proyecto y el contador muestra `04 casos`.
-- [ ] Hay un solo `h1` y los títulos de sección son `h2`.
-- [ ] Los enlaces del header llevan a `#proyectos`, `#sobre-mi` y `#contacto`, y esos `id` existen en la página.
-- [ ] Todos los enlaces "Ver caso" tienen `href="#"`.
-- [ ] El enlace de correo del footer tiene `href` que empieza por `mailto:`.
-- [ ] A 375 px de ancho no hay scroll horizontal.
-- [ ] A 1440 px las tarjetas se muestran en dos columnas; a 375 px, en una.
-- [ ] `getComputedStyle` del botón "Descargar CV" da `background-color: rgb(43, 92, 230)` y `border-radius` de 999 px.
-- [ ] El `h1` tiene `max-width: 16ch` y `font-weight: 800`.
-- [ ] El footer tiene fondo `rgb(18, 18, 20)`.
-- [ ] Con `prefers-reduced-motion: reduce` emulado no hay animaciones ni transiciones en la Home.
+- [x] `npm run build` termina sin errores.
+- [x] `npm run lint` termina sin errores.
+- [x] Abrir `/` redirige a `/home` y `/home` responde 200.
+- [x] Existen `app/home/page.tsx`, `app/data/data.ts` y los cinco archivos de `app/home/components/`.
+- [x] Ningún archivo de la Home contiene `"use client"` ni estilos en línea (`style=`), salvo que un valor no pueda expresarse con Tailwind.
+- [x] Todo texto visible de la Home se importa de `app/data/data.ts`; ningún componente tiene texto escrito a mano.
+- [x] Hay exactamente cuatro tarjetas de proyecto y el contador muestra `04 casos`.
+- [x] Hay un solo `h1` y los títulos de sección son `h2`.
+- [x] Los enlaces del header llevan a `#proyectos`, `#sobre-mi` y `#contacto`, y esos `id` existen en la página.
+- [x] Todos los enlaces "Ver caso" tienen `href="#"`.
+- [x] El enlace de correo del footer tiene `href` que empieza por `mailto:`.
+- [x] A 375 px de ancho no hay scroll horizontal.
+- [x] A 1440 px las tarjetas se muestran en dos columnas; a 375 px, en una.
+- [x] `getComputedStyle` del botón "Descargar CV" da `background-color: rgb(43, 92, 230)` y `border-radius` de 999 px.
+- [x] El `h1` tiene `max-width: 16ch` y `font-weight: 800`.
+- [x] El footer tiene fondo `rgb(18, 18, 20)`.
+- [x] Con `prefers-reduced-motion: reduce` emulado no hay animaciones ni transiciones en la Home.
 
 ## Decisiones tomadas y descartadas
 

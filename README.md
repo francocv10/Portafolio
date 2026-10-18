@@ -14,7 +14,11 @@ Sitio de portafolio personal construido con Next.js (App Router), React y Tailwi
 ## Estructura del proyecto
 
 ```
-app/            Rutas, layout y estilos globales (App Router)
+app/home/       Página principal (page.tsx + components/)
+app/proyectos/  Detalle de proyecto (/proyectos/[slug]) y sus componentes
+app/data/       Contenido del sitio (data.ts): textos, enlaces y proyectos
+app/            Layout y estilos globales (App Router)
+proxy.ts        Resuelve los slugs de proyecto y devuelve 404 si no existen
 public/         Archivos estáticos
 specs/          Specs de funcionalidades (se crea al usar /spec)
 .claude/skills/ Skills de Claude Code (spec, spec-impl, frontend-design)

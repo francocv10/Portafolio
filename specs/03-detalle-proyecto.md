@@ -101,22 +101,22 @@ Antes del paso 1, leer en `node_modules/next/dist/docs/` las guías de rutas din
 
 ## Criterios de aceptación
 
-- [ ] `npm run build` termina sin errores y genera las cuatro rutas `/proyectos/proyecto-1` … `proyecto-4`.
-- [ ] `npm run lint` termina sin errores.
-- [ ] `/proyectos/proyecto-1` responde 200 y `/proyectos/no-existe` responde 404.
-- [ ] Existen `app/proyectos/[slug]/page.tsx` y los siete archivos de `app/proyectos/components/`.
-- [ ] Ningún archivo del detalle contiene `"use client"` ni estilos en línea (`style=`), salvo que un valor no pueda expresarse con Tailwind.
-- [ ] Todo texto visible del detalle se importa de `app/data/data.ts`; ningún componente tiene texto escrito a mano.
-- [ ] Hay un solo `h1`; los títulos de sección y "Siguiente proyecto" son `h2`; "En resumen" es `h3`.
-- [ ] Los cuatro enlaces "Ver caso" de la Home tienen `href` `/proyectos/proyecto-1` … `proyecto-4` y navegan sin recargar la página completa.
-- [ ] "← Volver al portafolio" lleva a `/home`, "Contacto" a `/home#contacto` y "Ver todos los casos →" a `/home#proyectos`.
-- [ ] A 375 px de ancho no hay scroll horizontal.
-- [ ] A 1440 px la franja de datos muestra 4 columnas y el cuerpo muestra texto y aside lado a lado; a 375 px todo va en una columna.
-- [ ] `getComputedStyle` del botón "Contacto" da `background-color: rgb(43, 92, 230)` y `border-radius` de 999 px.
-- [ ] El `h1` tiene `max-width: 18ch` y `font-weight: 800`.
-- [ ] La captura principal tiene `border-radius: 20px` y las de la galería, `16px`.
-- [ ] El footer tiene fondo `rgb(18, 18, 20)`.
-- [ ] Los archivos de la Home no cambian, salvo `app/data/data.ts`.
+- [x] `npm run build` termina sin errores y genera las cuatro rutas `/proyectos/proyecto-1` … `proyecto-4`.
+- [x] `npm run lint` termina sin errores.
+- [x] `/proyectos/proyecto-1` responde 200 y `/proyectos/no-existe` responde 404.
+- [x] Existen `app/proyectos/[slug]/page.tsx` y los siete archivos de `app/proyectos/components/`.
+- [x] Ningún archivo del detalle contiene `"use client"` ni estilos en línea (`style=`), salvo que un valor no pueda expresarse con Tailwind.
+- [x] Todo texto visible del detalle se importa de `app/data/data.ts`; ningún componente tiene texto escrito a mano.
+- [x] Hay un solo `h1`; los títulos de sección y "Siguiente proyecto" son `h2`; "En resumen" es `h3`.
+- [x] Los cuatro enlaces "Ver caso" de la Home tienen `href` `/proyectos/proyecto-1` … `proyecto-4` y navegan sin recargar la página completa.
+- [x] "← Volver al portafolio" lleva a `/home`, "Contacto" a `/home#contacto` y "Ver todos los casos →" a `/home#proyectos`.
+- [x] A 375 px de ancho no hay scroll horizontal.
+- [x] A 1440 px la franja de datos muestra 4 columnas y el cuerpo muestra texto y aside lado a lado; a 375 px todo va en una columna.
+- [x] `getComputedStyle` del botón "Contacto" da `background-color: rgb(43, 92, 230)` y `border-radius` de 999 px.
+- [x] El `h1` tiene `max-width: 18ch` y `font-weight: 800`.
+- [x] La captura principal tiene `border-radius: 20px` y las de la galería, `16px`.
+- [x] El footer tiene fondo `rgb(18, 18, 20)`.
+- [x] Los archivos de la Home no cambian, salvo `app/data/data.ts`.
 
 ## Decisiones tomadas y descartadas
 
