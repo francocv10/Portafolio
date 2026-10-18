@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { site } from "../../data/data";
 import ProjectBody from "../components/ProjectBody";
 import ProjectFacts from "../components/ProjectFacts";
+import ProjectFooter from "../components/ProjectFooter";
+import ProjectGallery from "../components/ProjectGallery";
 import ProjectHeader from "../components/ProjectHeader";
 import ProjectHero from "../components/ProjectHero";
 import ProjectMainShot from "../components/ProjectMainShot";
@@ -20,7 +22,8 @@ export default async function ProjectPage({
     notFound();
   }
 
-  const { back, contact, eyebrow, facts, summaryTitle } = site.projectPage;
+  const { back, contact, eyebrow, facts, summaryTitle, next } =
+    site.projectPage;
 
   return (
     <div className="flex min-h-screen flex-col leading-[normal]">
@@ -44,7 +47,9 @@ export default async function ProjectPage({
           summaryTitle={summaryTitle}
           summary={project.detail.summary}
         />
+        <ProjectGallery labels={project.detail.gallery} />
       </main>
+      <ProjectFooter title={next.title} cta={next.cta} />
     </div>
   );
 }
