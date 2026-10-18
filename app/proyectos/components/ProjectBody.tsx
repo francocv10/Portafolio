@@ -39,7 +39,7 @@ export default function ProjectBody({
           ))}
         </div>
 
-        <aside className="flex min-w-0 flex-[1_1_260px] flex-col gap-4 self-start rounded-card border border-line bg-surface p-6">
+        <aside className="flex min-w-0 flex-[1_1_310px] flex-col gap-4 self-start rounded-card border border-line bg-surface p-6">
           <h3 className="m-0 font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-faint">
             {summaryTitle}
           </h3>
